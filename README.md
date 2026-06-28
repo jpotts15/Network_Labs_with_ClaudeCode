@@ -41,7 +41,9 @@ In short I tell claude code to generate a lab with some parameters like a 3 tier
 
 ## known issues in the backlog
 1. Claude just can't bootstrap ssh for cisco devices, always in global context
-2. Claude generates each link in the lab with a network connection, it works and it hides them but its unnecessary 
+2. Claude generates each link in the lab with a network connection, it works and it hides them but its unnecessary
+3. Claude doesn't check resource requirements, probably should fix on the eveng template side or just tell claude to double check resource requirements before finalizing
+4. Claude doesn't really consider resource constraints, mostly fine but if this ever moved beyond just my lab would instantly become an issue for resource constrained envs
 
 ##Claude Generated Overview
 ---
