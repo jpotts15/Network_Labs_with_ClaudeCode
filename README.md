@@ -34,8 +34,14 @@ In short I tell claude code to generate a lab with some parameters like a 3 tier
 3. Integrate a secrets manager
 4. Integrate a ansible/ automation orchestration platform
 5. Automated diagram generation workflow
-6. Choas Monkey integration 
+6. Choas Monkey integration
+7. Create an internal git
+8. Create an internal jira/ project management type thingy
+9. Create a grand unified model for lab generation that wraps all the elements together to have abstract and infinite reproducability
 
+## known issues in the backlog
+1. Claude just can't bootstrap ssh for cisco devices, always in global context
+2. Claude generates each link in the lab with a network connection, it works and it hides them but its unnecessary 
 
 ##Claude Generated Overview
 ---
