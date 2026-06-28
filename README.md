@@ -32,7 +32,9 @@ In short I tell claude code to generate a lab with some parameters like a 3 tier
 1. Build a improved lab manager (rpi) and document so I don't end up redoing this next year
 2. Integrate containerlabs and GNS3 into seperate MCPs
 3. Integrate a secrets manager
-4. Integrate a ansible/ automation orchestration platform 
+4. Integrate a ansible/ automation orchestration platform
+5. Automated diagram generation workflow
+6. Choas Monkey integration 
 
 
 ##Claude Generated Overview
