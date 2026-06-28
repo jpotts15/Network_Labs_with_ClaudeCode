@@ -1,18 +1,28 @@
-#Overview
+# Overview
 Its 2026 and while I could generate artisanal EVE-NG labs it felt like a good time to use some AI for a functional puprose. 
 
 Without first checking I had claude create a MCP for EVE-NG (after running into some headaches a quick google shows this is a solved problem but what fun is that) and it mostly worked, it took the EVE-NG API and wrapped it into a MCP and could boot strap labs. Claude does still have a lot of silly behavior where you still have to treat it like a junior network admin, for instance it still won't conf t to generate RSA keys on cisco images, I've manaually fixed it and fixed its scripts just for it to forget again, I assume at some point it could do it from the global but for whatever reason it just keeps running against that. Otherwise its great and I've generated a few labs of decdent size and complexity this way 
 
-##Lab Examples
+Claude regularly defaults to just running powershell/ python scripts to do things so there is room for improvement but with the goal in mind of being able to generate baseline eve-ng labs I don't really care about the underlying mechanics (e.g. eve-ng has a inbuilt method to import configs but its problematic so claude just shortcut to using the telnet console to push configs, which I would knock if I hadn't done the same in the past). 
+
+## Lab Examples
+## Multi-Site Data Center Example
+<img width="1461" height="871" alt="image" src="https://github.com/user-attachments/assets/95c7bd42-a683-4c46-948d-f8c306393af9" />
 
 
-##Connectors
+### Palo Alto Lab
+<img width="1431" height="882" alt="image" src="https://github.com/user-attachments/assets/ca681554-3498-4235-96ce-459aed11d5f0" />
+
+
+## Connectors
 Along with the EVE-NG MCP/API I also have claude connected into a netbox instance for IPAM/DCIM and a bookstacks instance for wiki. This works well and eventually will build MCPs for it or use already built ones for the purpose.
 
-##Homelab Setup 
+## Homelab Setup 
 The basic diagram of the setup below
 <img width="771" height="871" alt="homelab drawio" src="https://github.com/user-attachments/assets/849ad28f-59c4-4d3a-9490-8ba2407cb7d5" />
 
+## Lab Generation
+In short I tell claude code to generate a lab with some 
 
 ##Claude Generated Overview
 ---
