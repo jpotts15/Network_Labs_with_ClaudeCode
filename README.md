@@ -23,7 +23,8 @@ Along with the EVE-NG MCP/API I also have claude connected into a netbox instanc
 
 ## Homelab Setup 
 The basic diagram of the setup below
-<img width="771" height="871" alt="homelab drawio" src="https://github.com/user-attachments/assets/849ad28f-59c4-4d3a-9490-8ba2407cb7d5" />
+<img width="773" height="873" alt="homelab drawio" src="https://github.com/user-attachments/assets/1733b8a5-df2a-4975-a99f-935c8907826c" />
+
 
 ## Lab Generation
 In short I tell claude code to generate a lab with some parameters like a 3 tier clos like topology using cisco nexus virtual switches, give it a baseline config w/ a IGP and build a vxlan overlay, document in bookstack and use netbox as an IPAM
