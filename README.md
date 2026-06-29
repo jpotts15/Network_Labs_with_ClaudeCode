@@ -9,6 +9,9 @@ A longer term idea is to build a baseline automation system to generate lab topo
 
 Bottom line right now its pretty useful, a lot of folks are instantly anti-AI which is a fine prerogative but for me I've built so many baseline labs and spent so many hours overcoming minor issues that become time sinks that if I can have claude act like a 1000 monkeys beating against it until it gets to 75% then I'm happy because I can hand hold it remotely while playing with my kids and then spend the few hours I have doing the actual part of the lab I set out to do. Don't get me wrong, doing that upfront and initial work is very vaulable if you never have but this project is about automating that pain point and getting to the meat of the labs.   
 
+## Goal
+The goal of this project is to simplify the lab creation for (human) network engineers, smooth over pain points and shorten the time between learning and lab'ing. 
+
 ## Lab Examples
 ## Multi-Site Data Center Example
 <img width="1461" height="871" alt="image" src="https://github.com/user-attachments/assets/95c7bd42-a683-4c46-948d-f8c306393af9" />
@@ -29,9 +32,32 @@ The basic diagram of the setup below
 ## Lab Generation
 In short I tell claude code to generate a lab with some parameters like a 3 tier clos like topology using cisco nexus virtual switches, give it a baseline config w/ a IGP and build a vxlan overlay, document in bookstack and use netbox as an IPAM
 
+### Lab Generation Example
+Prompt: "generate a lab a 3 tier clos like topology using cisco nexus virtual switches, give it a baseline config w/ a IGP and build a vxlan overlay, document in bookstack and use netbox as an IPAM, use lightway 7200 routers as test endpoints hanging off the clos and have 2 different encapsulated vlans with test endpoints"
+
+Had to allow a few scripts to run as it used powershell to bootstrap configs and then had to have it use vrfs to seperate labs out in netbox
+
+Result: 
+<img width="966" height="754" alt="image" src="https://github.com/user-attachments/assets/a9035e6c-3724-429a-8331-d444f7097044" />
+<img width="1521" height="512" alt="image" src="https://github.com/user-attachments/assets/28b98cc2-e23f-4e2c-838e-95d29b2ee778" />
+<img width="1720" height="1181" alt="image" src="https://github.com/user-attachments/assets/82745862-3544-4d77-997b-c7779076a5a1" />
+
+In the EVE-NG lab all nodes were off which made me suspicious that it didn't config them, pulling up a device showed the would you like to run startup config so it likely means claude either didn't push the configs so had to enter another prompt
+
+prompt2: "can you do an initial configuration of all lab devices? I just turned on the eveng  lab and noticed devices prompting for initial config"
+
+Claude found that whatever method it was using in python to push console telnet configs didn't work so it fixed that and pushed 
+
+### Config Example
+
+#### Verdict of this example
+Not bad but still not great, two main hinderances in turning something like this into a bigger project/ package:
+1. Many things are still gated, e.g. getting images (there are tools projects for this but enough of a gray area that I wouldn't incorporate them), getting fremium (CML free at the time of writing this) and similar
+2. Claude needs to be treated like a jr network/ system/ developer that happens to know some very advanced things and can google fairly well 
+
 ## ToDo
 1. Build a improved lab manager (rpi) and document so I don't end up redoing this next year
-2. Integrate containerlabs and GNS3 into seperate MCPs
+2. Integrate containerlabs, CML and GNS3 into seperate MCPs
 3. Integrate a secrets manager
 4. Integrate a ansible/ automation orchestration platform
 5. Automated diagram generation workflow
