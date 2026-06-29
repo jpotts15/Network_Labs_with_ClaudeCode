@@ -53,7 +53,7 @@ Claude found that whatever method it was using in python to push console telnet 
 #### Verdict of this example
 Not bad but still not great, two main hinderances in turning something like this into a bigger project/ package:
 1. Many things are still gated, e.g. getting images (there are tools projects for this but enough of a gray area that I wouldn't incorporate them), getting fremium (CML free at the time of writing this) and similar
-2. Claude needs to be treated like a jr network/ system/ developer that happens to know some very advanced things and can google fairly well 
+2. Claude needs to be treated like a jr network/ system/ developer that happens to know some very advanced things and can google fairly well but likes to fire off scripts and walk away 
 
 ## ToDo
 1. Build a improved lab manager (rpi) and document so I don't end up redoing this next year
